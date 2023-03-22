@@ -9,29 +9,35 @@
 Copyright [2023] Michael Savin
 */
 
-#include <cstdio>
+#include <iomanip>
 #include <iostream>
 
-float a = 0, b = 0;
-float ma;
-char q, w, e, r, t;
+int main()
+{
+    float a = 0, b = 0;
+    float ma;
+    char str[5];
+    char q, w, e, r, t;
 
-int main() {
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
 
-  std::cout << "Введите первое число: ";
-  std::cin >> a;
-  std::cout << "Введите второе число: ";
-  std::cin >> b;
+    ma = (a + b) / 2;
 
-  ma = (a + b) / 2;
+    std::cout << std::fixed << std::setw(3) << std::setprecision(2) << ma<< std::endl;
 
-  printf("%.2f\n", ma);
+    std::cout << "Введите слово из пяти букв:\n";
+    // TODO: Уточнить про ввод в одну строку или по символу на каждой строке
+    for (int i = 0; i <5; i++) {
+        std::cin >> str[i];
+    }
 
-  std::cout << "Введите слово из пяти букв:\n";
-  // TODO: Уточнить про ввод в одну строку или по символу на каждой строке
-  // TODO: Уточнить про вывод и возможность обработки нештатных ситуаций (строка больше 5 символов)
-  scanf("%c%c%c%c%c", &q, &w, &e, &r, &t);
-  printf("%c%c%c%c%c", q, w, e, r, t);
+    // TODO: Уточнить про вывод и возможность обработки нештатных ситуаций (строка больше 5 символов)
+    for (int i = 0; i <5; i++) {
+        std::cout << str[i] << std::endl;
+    }
 
-  return 0;
+    return 0;
 }

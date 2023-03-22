@@ -6,13 +6,12 @@
 # Use 'make remove' to clean up the hole project
 
 # Name of target file
-TARGET     = lab01
-
+TARGET     = lab01.1
 CXX        = clang++
 CXXFLAGS   = -Weverything -Wall -Wextra -Wpointer-arith -Wcast-qual \
              -Wno-missing-braces -Wempty-body -Wno-error=uninitialized \
-             -Wno-error=deprecated-declarations \
-             -pedantic-errors -pedantic \
+             -Wno-error=deprecated-declarations -Wno-unused-variable \
+             -Wno-poison-system-directories -pedantic-errors -pedantic \
              -Os
 
 LD         = clang++ -o
@@ -28,13 +27,19 @@ OBJECTS   := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 RM         = rm -f
 
-$(BINDIR)/$(TARGET): $(OBJECTS)
+$(BINDIR)/$(TARGET): init $(OBJECTS)
 	@$(LD) $@ $(LDFLAGS) $(OBJECTS)
 	@echo "Linking complete!"
 
 $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
+
+.PHONY: init
+init:
+	@mkdir -p ./$(SRCDIR) || true
+	@mkdir -p ./$(OBJDIR) || true
+	@mkdir -p ./$(BINDIR) || true
 
 .PHONY: clean
 clean:
