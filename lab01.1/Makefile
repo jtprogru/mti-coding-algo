@@ -52,5 +52,5 @@ remove: clean
 	@echo "Executable removed!"
 
 .PHONY: run
-run: $(BINDIR)/$(TARGET)
+run:
 	@$(BINDIR)/$(TARGET)
