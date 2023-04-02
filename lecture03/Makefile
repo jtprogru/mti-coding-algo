@@ -6,13 +6,13 @@
 # Use 'make remove' to clean up the hole project
 
 # Name of target file
-TARGET     = lecture00
+TARGET     = lecture03
 
 CXX        = clang++
 CXXFLAGS   = -Weverything -Wall -Wextra -Wpointer-arith -Wcast-qual \
              -Wno-missing-braces -Wempty-body -Wno-error=uninitialized \
-             -Wno-error=deprecated-declarations -Wno-unused-variable \
-             -Wno-poison-system-directories -pedantic-errors -pedantic \
+             -Wno-error=deprecated-declarations \
+             -pedantic-errors -pedantic \
              -Os
 
 LD         = clang++ -o
@@ -28,19 +28,13 @@ OBJECTS   := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 
 RM         = rm -f
 
-$(BINDIR)/$(TARGET): init $(OBJECTS)
+$(BINDIR)/$(TARGET): $(OBJECTS)
 	@$(LD) $@ $(LDFLAGS) $(OBJECTS)
 	@echo "Linking complete!"
 
 $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
-
-.PHONY: init
-init:
-	@mkdir -p ./$(SRCDIR) || true
-	@mkdir -p ./$(OBJDIR) || true
-	@mkdir -p ./$(BINDIR) || true
 
 .PHONY: clean
 clean:
@@ -53,5 +47,5 @@ remove: clean
 	@echo "Executable removed!"
 
 .PHONY: run
-run:
+run: $(BINDIR)/$(TARGET)
 	@$(BINDIR)/$(TARGET)

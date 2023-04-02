@@ -6,8 +6,7 @@
 # Use 'make remove' to clean up the hole project
 
 # Name of target file
-TARGET     = lecture00
-
+TARGET     = lab01z2p2
 CXX        = clang++
 CXXFLAGS   = -Weverything -Wall -Wextra -Wpointer-arith -Wcast-qual \
              -Wno-missing-braces -Wempty-body -Wno-error=uninitialized \

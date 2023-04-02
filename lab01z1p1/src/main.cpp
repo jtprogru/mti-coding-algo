@@ -1,0 +1,28 @@
+/*
+ *
+ * Пользователь должен ввести 2 числа. Вам надо показать на
+ * экран произведение этих чисел, сумму и разницу.
+ * Покажите так же среднее арифметическое этих введенных чисел.
+ *
+ * Copyright [2023] Michael Savin
+*/
+
+#include <iomanip>
+#include <iostream>
+
+int main()
+{
+    float a = 0, b = 0;
+    float ma;
+    char str[5];
+
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+
+    ma = (a + b) / 2;
+
+    std::cout << std::fixed << std::setw(3) << std::setprecision(2) << ma << std::endl;
+    return 0;
+}
