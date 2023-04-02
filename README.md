@@ -9,6 +9,8 @@
 - [lab01z2p1](lab01z2p1/src/main.cpp)
 - [lab01z2p2](lab01z2p2/src/main.cpp)
 - [lab01z2p3](lab01z2p3/src/main.cpp)
+- [lab02z1](lab02z1/src/main.cpp)
+- [lab02z2](lab02z2/src/main.cpp)
 
 ## Список полезного
 
