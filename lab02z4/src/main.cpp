@@ -10,8 +10,8 @@
  * Copyright [2023] Michael Savin
  */
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 int main()
 {
@@ -26,12 +26,13 @@ int main()
     std::cin >> y2;
 
     // Вычисляем расстояния от каждой точки до центра координат
-    distance1 = float(sqrt(pow(x1, 2) + pow(y1, 2)));
-    distance2 = float(sqrt(pow(x2, 2) + pow(y2, 2)));
-    distance3 = float(sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)));
+    distance1 = sqrt(pow(x1, 2) + pow(y1, 2));
+    distance2 = sqrt(pow(x2, 2) + pow(y2, 2));
+    distance3 = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
 
-    // Проверяем, образуют ли точки вместе с центром координат прямоугольный треугольник
-    if (float(pow(distance1, 2)) + float(pow(distance2, 2)) == float(pow(distance3, 2)))
+    // Проверяем, образуют ли точки вместе с центром координат прямоугольный
+    // треугольник
+    if (pow(distance1, 2) + pow(distance2, 2) == pow(distance3, 2))
     {
         std::cout << "Точки образуют прямоугольный треугольник" << std::endl;
     }
