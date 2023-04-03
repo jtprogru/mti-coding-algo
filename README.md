@@ -12,6 +12,7 @@
 - [lab02z1](lab02z1/src/main.cpp)
 - [lab02z2](lab02z2/src/main.cpp)
 - [lab02z3](lab02z3/src/main.cpp)
+- [lab02z4](lab02z4/src/main.cpp)
 
 ## Список полезного
 
