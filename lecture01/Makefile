@@ -38,7 +38,8 @@ $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 
 .PHONY: clean
 clean:
-	@$(RM) $(OBJECTS)
+	@find . -type d -name "obj" | xargs rm -rf ;
+	@find . -type d -name "bin" | xargs rm -rf ;
 	@echo "Cleanup complete!"
 
 .PHONY: remove

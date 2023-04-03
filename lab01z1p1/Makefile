@@ -43,7 +43,8 @@ init:
 
 .PHONY: clean
 clean:
-	@$(RM) $(OBJECTS)
+	@find . -type d -name "obj" | xargs rm -rf ;
+	@find . -type d -name "bin" | xargs rm -rf ;
 	@echo "Cleanup complete!"
 
 .PHONY: remove
