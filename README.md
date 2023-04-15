@@ -16,11 +16,13 @@
 - [lab02z5](lab02z5/src/main.cpp)
 - [lab02z6](lab02z6/src/main.cpp)
 - [lab02z7](lab02z7/src/main.cpp)
+- [lab03z6](lab03z6/src/main.cpp)
 
 ## Список полезного
 
 - [CppDeveloperRoadmap](https://salmer.github.io/CppDeveloperRoadmap/Russian/);
 - [Learn X in Y minutes](https://learnxinyminutes.com/docs/c++/);
+- [Yandex C++ handbook](https://academy.yandex.ru/handbook/cpp);
 
 ## License
 
