@@ -11,41 +11,37 @@
  *
  * Copyright [2023] Michael Savin
  */
+#include <iostream>
+#include <vector>
 
 #include "sortArray.h"
 #include "findMinIndex.h"
 #include "findMaxIndex.h"
-#include <iostream>
-#include <algorithm>
-
 
 int main() {
-    int size;
+    int n;
     std::cout << "Введите размер массива: ";
-    std::cin >> size;
+    std::cin >> n;
 
-    // Выделяем память для массива
-    double* arr = new double[size];
+    double* arr = new double[n];
 
-    // Вводим элементы массива
-    for (int i = 0; i < size; i++) {
-        std::cout << "Введите элемент массива " << i << ": ";
+    std::cout << "Введите элементы массива" << std::endl;
+    for (int i = 0; i < n; ++i) {
+        std::cout << "Введите " << i << " элемент массива: ";
         std::cin >> arr[i];
     }
 
-    int minIndex = findMinIndex(arr, size);
-    int maxIndex = findMaxIndex(arr, size);
+    int min_index = find_min_index(arr);
+    int max_index = find_max_index(arr);
 
-    // Сортируем элементы массива
-    sortArray(arr, size, minIndex, maxIndex);
+    bubble_sort_asc(arr, 0, min_index);
+    bubble_sort_desc(arr, max_index + 1, sizeof(arr));
 
-    // Выводим отсортированный массив
-    for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << " ";
+    std::cout << "Отсортированный массив: ";
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << ' ';
     }
-
-    // Освобождаем память, выделенную для массива
-    delete[] arr;
+    std::cout << std::endl;
 
     return 0;
 }

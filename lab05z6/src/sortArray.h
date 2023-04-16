@@ -4,12 +4,25 @@
  *
  * Copyright [2023] Michael Savin
  */
-
 #include <iostream>
-#include <algorithm>
+#include <vector>
 
-// Функция для сортировки массива
-inline void sortArray(double arr[], int size, int minIndex, int maxIndex) {
-    std::sort(arr, arr + minIndex); // Сортировка элементов до минимального значения
-    std::sort(arr + maxIndex + 1, arr + size, std::greater<double>()); // Сортировка элементов после максимального значения
+inline void bubble_sort_asc(double* arr, int start, int end) {
+    for (int i = start; i < end; ++i) {
+        for (int j = start; j < end - i - 1; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+
+inline void bubble_sort_desc(double* arr, int start, int end) {
+    for (int i = start; i < end; ++i) {
+        for (int j = start; j < end - i - 1; ++j) {
+            if (arr[j] < arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
 }
