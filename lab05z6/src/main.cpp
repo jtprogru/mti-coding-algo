@@ -12,16 +12,27 @@
  * Copyright [2023] Michael Savin
  */
 
-#include <iostream>
-#include <algorithm>
 #include "sortArray.h"
 #include "findMinIndex.h"
 #include "findMaxIndex.h"
+#include <iostream>
+#include <algorithm>
 
 
 int main() {
-    double arr[] = {2.5, 4.6, 1.2, 6.4, 9.1, 3.8, 7.2, 5.7};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size;
+    std::cout << "Введите размер массива: ";
+    std::cin >> size;
+
+    // Выделяем память для массива
+    double* arr = new double[size];
+
+    // Вводим элементы массива
+    for (int i = 0; i < size; i++) {
+        std::cout << "Введите элемент массива " << i << ": ";
+        std::cin >> arr[i];
+    }
+
     int minIndex = findMinIndex(arr, size);
     int maxIndex = findMaxIndex(arr, size);
 
@@ -32,8 +43,9 @@ int main() {
     for (int i = 0; i < size; i++) {
         std::cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+
+    // Освобождаем память, выделенную для массива
+    delete[] arr;
 
     return 0;
 }
-
