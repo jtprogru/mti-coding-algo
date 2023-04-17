@@ -19,14 +19,14 @@
 #include "findMaxIndex.h"
 
 int main() {
-    int n;
+    std::string::size_type n;
     std::cout << "Введите размер массива: ";
     std::cin >> n;
 
     double* arr = new double[n];
 
     std::cout << "Введите элементы массива" << std::endl;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < int(n); ++i) {
         std::cout << "Введите " << i << " элемент массива: ";
         std::cin >> arr[i];
     }
@@ -38,7 +38,7 @@ int main() {
     bubble_sort_desc(arr, max_index + 1, sizeof(arr));
 
     std::cout << "Отсортированный массив: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < int(n); i++) {
         std::cout << arr[i] << ' ';
     }
     std::cout << std::endl;
