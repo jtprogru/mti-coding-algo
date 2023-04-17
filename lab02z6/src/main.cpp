@@ -12,7 +12,7 @@
 #include <iostream>
 
 // Функция для проверки, является ли число простым
-bool isPrime(int number)
+static bool isPrime(int number)
 {
     if (number <= 1)
     {
@@ -29,7 +29,7 @@ bool isPrime(int number)
 }
 
 // Функция для проверки, является ли число числом Мерсена
-bool isMersenne(int number)
+static bool isMersenne(int number)
 {
     if (number <= 0)
     {
@@ -38,7 +38,7 @@ bool isMersenne(int number)
     int p = 2;
     while (true)
     {
-        int mersenne = pow(2, p) - 1;
+        int mersenne = int(pow(2, p) - 1);
         if (mersenne == number)
         {
             return true;
