@@ -8,15 +8,15 @@
 # Name of target file
 TARGET     = lab05z6
 CXX        = clang++
-CXXFLAGS   = -Weverything -Wall -Wextra -Wpointer-arith -Wcast-qual \
-			 -Werror -Wvla-extension \
+CXXFLAGS   = -fno-omit-frame-pointer -std=c++20 -O3 -fsanitize=address,undefined -Werror \
+			 -Weverything -Wall -Wextra -Wpointer-arith -Wcast-qual \
              -Wno-missing-braces -Wempty-body -Wno-error=uninitialized \
              -Wno-error=deprecated-declarations -Wno-unused-variable \
              -Wno-poison-system-directories -pedantic-errors -pedantic \
              -Os
 
 LD         = clang++ -o
-LDFLAGS    = -Wall -pedantic
+LDFLAGS    = -Wall -pedantic -stdlib=libc++ -fsanitize=address
 
 SRCDIR     = src
 OBJDIR     = obj
