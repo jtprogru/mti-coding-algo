@@ -17,7 +17,7 @@ int main() {
     getline(std::cin, str);
 
     // Добавляем пробел после каждого символа '*'
-    for (int i = 0; i < str.length(); i++) {
+    for (std::string::size_type i = 0; i < str.length(); i++) {
         if (str[i] == '*') {
             newStr += "* ";
         } else {
