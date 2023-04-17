@@ -15,6 +15,7 @@
 
 int main()
 {
+    const double epsilon = std::numeric_limits<double>::epsilon();
     float x1 = 0, y1 = 0, x2 = 0, y2 = 0, distance1 = 0, distance2 = 0, distance3 = 0;
     std::cout << "Введите координаты первой точки (x1): ";
     std::cin >> x1;
@@ -26,13 +27,13 @@ int main()
     std::cin >> y2;
 
     // Вычисляем расстояния от каждой точки до центра координат
-    distance1 = sqrt(pow(x1, 2) + pow(y1, 2));
-    distance2 = sqrt(pow(x2, 2) + pow(y2, 2));
-    distance3 = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+    distance1 = static_cast<float>(sqrt(pow(x1, 2) + pow(y1, 2)));
+    distance2 = static_cast<float>(sqrt(pow(x2, 2) + pow(y2, 2)));
+    distance3 = static_cast<float>(sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)));
 
     // Проверяем, образуют ли точки вместе с центром координат прямоугольный
     // треугольник
-    if (pow(distance1, 2) + pow(distance2, 2) == pow(distance3, 2))
+    if (std::abs(pow(distance1, 2) + pow(distance2, 2) - pow(distance3, 2)) <= epsilon)
     {
         std::cout << "Точки образуют прямоугольный треугольник" << std::endl;
     }
