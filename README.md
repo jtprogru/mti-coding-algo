@@ -1,5 +1,7 @@
 # mti-coding-algo
 
+[![TODO workflow](https://github.com/jtprogru/mti-coding-algo/actions/workflows/todo-issues.yaml/badge.svg)](https://github.com/jtprogru/mti-coding-algo/actions/workflows/todo-issues.yaml)
+
 Исходники на C++ с занятий и лабораторные работы по предмету "Основы алгоритмизации и программирования" (ОАиП) в рамках обучения по направлению ОДКИПо в Московском Технологическом Институте (МТИ).
 
 ## Список лабораторных
