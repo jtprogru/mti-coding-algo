@@ -26,6 +26,18 @@
 - [lab08z6](lab08z6/src/main.cpp)
 - [lab09z1](lab09z1/src/main.cpp)
 
+## Список лекций
+- [lecture00](lecture00/src/main.cpp)
+- [lecture01](lecture01/src/main.cpp)
+- [lecture02](lecture02/src/main.cpp)
+- [lecture03](lecture03/src/main.cpp)
+- [lecture04](lecture04/src/main.cpp)
+- [lecture05](lecture05/src/main.cpp)
+- [lecture06](lecture06/src/main.cpp)
+- [lecture07](lecture07/src/main.cpp)
+- [lecture08](lecture08/src/main.cpp)
+
+
 ## Список полезного
 
 - [CppDeveloperRoadmap](https://salmer.github.io/CppDeveloperRoadmap/Russian/);
