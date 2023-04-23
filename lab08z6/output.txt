@@ -1,0 +1,2 @@
+Absolute sum: 55.7
+Squared product: 1.31096e+25
