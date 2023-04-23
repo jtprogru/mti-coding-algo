@@ -1,17 +1,30 @@
 ---
-name: TODO workflow
+name: Manage TODO
 
-"on": [push, pull_request]
+"on":
+  schedule:
+    - cron: "0/10 * * * *"
+  issues:
+    types: [opened, edited]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  update-todo:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@master
-      - name: Run tdg-github-action
-        uses: ribtoks/tdg-github-action@master
-        with:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          SHA: ${{ github.sha }}
-          REF: ${{ github.ref }}
+      - uses: ikanago/issue-deadline-manager@v1
+# name: TODO workflow
+#
+# "on": [push, pull_request]
+#
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Run tdg-github-action
+#         uses: ribtoks/tdg-github-action@master
+#         with:
+#           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           REPO: ${{ github.repository }}
+#           SHA: ${{ github.sha }}
+#           REF: ${{ github.ref }}
