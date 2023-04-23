@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 
+// FIX: Нарисовать правильную блок-схему для функции
 inline void bubble_sort_asc(double* arr, int start, int end) {
     for (int i = start; i < end; ++i) {
         for (int j = start; j < end - i - 1; ++j) {
@@ -17,6 +18,7 @@ inline void bubble_sort_asc(double* arr, int start, int end) {
     }
 }
 
+// FIX: Нарисовать правильную блок-схему для функции
 inline void bubble_sort_desc(double* arr, int start, int end) {
     for (int i = start; i < end; ++i) {
         for (int j = start; j < end - i - 1; ++j) {
