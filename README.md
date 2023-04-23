@@ -20,6 +20,8 @@
 - [lab04z6](lab04z6/src/main.cpp)
 - [lab05z6](lab05z6/src/main.cpp)
 - [lab06z6](lab06z6/src/main.cpp)
+- [lab07z6](lab07z6/src/main.cpp)
+- [lab08z6](lab08z6/src/main.cpp)
 
 ## Список полезного
 
