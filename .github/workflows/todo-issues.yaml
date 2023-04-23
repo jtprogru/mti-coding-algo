@@ -1,4 +1,5 @@
 ---
+# TODO: Please RTFM in https://github.com/marketplace/actions/track-todo-action
 name: TODO workflow
 
 "on": [push, pull_request]
