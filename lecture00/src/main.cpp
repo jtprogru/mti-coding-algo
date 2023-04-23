@@ -15,9 +15,9 @@ static int resolve(const char *name)
   {
     return 1;
   }
-  ssize_t bytes_read = read (input_fd, &buffer, BUF_SIZE);
+  ssize_t bytes_read = read(input_fd, &buffer, BUF_SIZE);
   printf("%.*s", int(bytes_read), buffer);
-  close (input_fd);
+  close(input_fd);
   printf("Successfully exited\n");
   return 0;
 }
