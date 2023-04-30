@@ -1,14 +1,12 @@
 /*
- * Блок-схема доступна тут:
- * https://app.code2flow.com/7okuqwvhK4pA
- *
  * Copyright [2023] Michael Savin
  */
 #include <iostream>
 #include <vector>
 
 // TODO: Нарисовать правильную блок-схему для функции
-inline void bubble_sort_asc(double* arr, int start, int end) {
+// Функция сортировки пузырьком по возростанию
+inline void bubbleSortAsc(double* arr, int start, int end) {
     for (int i = start; i < end; ++i) {
         for (int j = start; j < end - i - 1; ++j) {
             if (arr[j] > arr[j + 1]) {
@@ -19,7 +17,8 @@ inline void bubble_sort_asc(double* arr, int start, int end) {
 }
 
 // TODO: Нарисовать правильную блок-схему для функции
-inline void bubble_sort_desc(double* arr, int start, int end) {
+// Функция сортировки пузырьком по убыванию
+inline void bubbleSortDesc(double* arr, int start, int end) {
     for (int i = start; i < end; ++i) {
         for (int j = start; j < end - i - 1; ++j) {
             if (arr[j] < arr[j + 1]) {

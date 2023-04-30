@@ -13,12 +13,12 @@
  */
 #include <iostream>
 #include <vector>
-
 #include "sortArray.h"
-#include "findMinIndex.h"
-#include "findMaxIndex.h"
+#include "findIndex.h"
 
 int main() {
+    int min_index = 0;
+    int max_index = 0;
     std::string::size_type n;
     std::cout << "Введите размер массива: ";
     std::cin >> n;
@@ -27,15 +27,15 @@ int main() {
 
     std::cout << "Введите элементы массива" << std::endl;
     for (int i = 0; i < int(n); ++i) {
-        std::cout << "Введите " << i << " элемент массива: ";
+        std::cout << "Введите " << i+1 << " элемент массива: ";
         std::cin >> arr[i];
     }
 
-    int min_index = find_min_index(arr);
-    int max_index = find_max_index(arr);
+    findMinIndex(arr, &min_index);
+    findMaxIndex(arr, &max_index);
 
-    bubble_sort_asc(arr, 0, min_index);
-    bubble_sort_desc(arr, max_index + 1, sizeof(arr));
+    bubbleSortAsc(arr, 0, min_index);
+    bubbleSortDesc(arr, max_index + 1, sizeof(arr));
 
     std::cout << "Отсортированный массив: ";
     for (int i = 0; i < int(n); i++) {
