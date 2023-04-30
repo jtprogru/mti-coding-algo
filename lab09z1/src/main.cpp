@@ -4,39 +4,31 @@
  * линейного поиска. Посчитать эффективность алгоритма.
  *
  * Блок-схема доступна тут:
- * https://app.code2flow.com/XXXXXXXXXXXX
+ * https://app.code2flow.com/D369a98P1LLq
  * Copyright [2023] Michael Savin
  */
 
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <cstdlib>
-#include <algorithm>
 
 int main() {
     srand(static_cast<unsigned>(time(0)));
 
     int n, x;
+    int index = -1;
+    int comparisons = 0;
+
     std::cout << "Введите длину массива: ";
     std::cin >> n;
     std::cout << "Введите искомый элемент: ";
     std::cin >> x;
 
     std::vector<int> A(n);
-    // TODO: Уточнить по части наполнения массива;
     for (int i = 0; i < n; ++i) {
-        A[i] = rand() % 1000; // Генерация случайных чисел в диапазоне от 0 до 999
+        std::cout << "Введите " << i << " элемент: ";
+        std::cin >> A[i]; // Наполнение массива данными;
     }
-
-    std::cout << "Сгенерированный массив: ";
-    for (const auto& el : A) {
-        std::cout << el << ' ';
-    }
-    std::cout << std::endl;
-
-    int index = -1;
-    int comparisons = 0;
 
     for (size_t i = 0; i < A.size(); ++i) {
         ++comparisons;
