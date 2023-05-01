@@ -25,6 +25,9 @@
 - [lab07z6](lab07z6/src/main.cpp)
 - [lab08z6](lab08z6/src/main.cpp)
 - [lab09z1](lab09z1/src/main.cpp)
+- [lab09z2](lab09z2/src/main.cpp)
+- [lab10z1](lab10z1/src/main.cpp)
+- [lab10z2](lab10z2/src/main.cpp)
 
 ## Список лекций
 - [lecture00](lecture00/src/main.cpp)
