@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <vector>
-#include <ctime>
+#include <chrono>
 
 int linearSearchWithBarrier(std::vector<int>& data, int key) {
     int n = data.size();
@@ -44,17 +44,17 @@ int main() {
         std::cin >> A[i];
     }
 
-    clock_t start = clock();
+    auto start = std::chrono::high_resolution_clock::now();
     int index = linearSearchWithBarrier(A, x);
-    clock_t end = clock();
-    double barrierSearchTime = static_cast<double>(end - start) / CLOCKS_PER_SEC;
+    auto end = std::chrono::high_resolution_clock::now();
 
     if (index != -1) {
         std::cout << "Искомый элемент найден на позиции " << index << std::endl;
     } else {
         std::cout << "Искомый элемент не найден" << std::endl;
     }
-
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    std::cout << "Время выполнения пузырьковой сортировки: " << duration.count() << " микросекунд" << std::endl;
     return 0;
 }
 
