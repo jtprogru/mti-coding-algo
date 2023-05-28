@@ -3,6 +3,9 @@
  * Построить блок-схему и написать программу
  * сортировки подсчётом. Посчитать эффективность алгоритма.
  *
+ * Подробности алгоритма доступны на Википедии
+ * https://en.wikipedia.org/wiki/Counting_sort
+ *
  * Блок-схема доступна тут:
  * https://app.code2flow.com/nbftpxdKS2zc
  * Copyright [2023] Michael Savin
