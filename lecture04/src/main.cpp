@@ -5,7 +5,7 @@
  * и собрать весь вывод скрипта в переменную,
  * после чего вывести его в stdout.
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iostream>

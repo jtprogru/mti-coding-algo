@@ -4,7 +4,7 @@
  * на местах, индекс которых равен 3 и сумму
  * четных чисел.
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iostream>

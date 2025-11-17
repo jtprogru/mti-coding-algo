@@ -30,12 +30,22 @@ int main() {
     return 0;
 }
 
+/**
++ * Creates a file with the given file name and writes 10 random numbers to it.
++ *
++ * @param fileName the name of the file to be created
++ *
++ * @return void
++ *
++ * @throws None
++ */
 void createFile(const std::string& fileName) {
     std::ofstream file(fileName, std::ios::out);
 
     for (size_t i = 0; i < 10; ++i) {
         file << std::rand() % 101 << "\t";
     }
+    file.close(); // Close the file after writing to it
 }
 
 std::vector<int> readFile(const std::string& fileName) {

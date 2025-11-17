@@ -14,7 +14,7 @@
  * Блок-схема доступна тут:
  * https://app.code2flow.com/g1c8V7vmRP4X
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iostream>

@@ -5,7 +5,7 @@
  *
  * Блок-схема доступна тут:
  * https://app.code2flow.com/KQy9pdDBs6b4
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iostream>

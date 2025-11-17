@@ -8,7 +8,7 @@
  * Блок-схема доступна тут:
  * https://app.code2flow.com/nDqOpx0w2kZj
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iomanip>

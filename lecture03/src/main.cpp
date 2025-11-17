@@ -3,7 +3,7 @@
  * размером N x M, располагающихся на четных строках
  * и в нечетных столбцах.
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <iostream>

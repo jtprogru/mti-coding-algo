@@ -7,7 +7,7 @@
  * Блок-схема доступна тут:
  * https://app.code2flow.com/syltm3ydE8k5
  *
- * Copyright [2023] Michael Savin
+ * Copyright [2023] Mikhail Savin
  */
 
 #include <cmath>
